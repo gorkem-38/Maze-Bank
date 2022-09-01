@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maze Bank</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
     <link rel="stylesheet" href="./output.css">
   </head>
-  <body>
+  <body class="bg-gold">
     <div id="root">
       <header class="grid grid-cols-3">
         <!-- 1ère grid -->
@@ -27,8 +28,8 @@
         </section>
         <!-- 2ème grid -->
         <section class="flex justify-center">
-          <img src="../../assets/img/bitcoin-g0161e2bb6_1920.jpg" alt="bitcoin" width="140px">
-          <p class="text-xs">Mise à jour le 01/09/2002</p>
+          <img src="../../assets/img/bitcoin-g0161e2bb6_1920.jpg" alt="bitcoin" width="200px">
+          <p>Mise à jour le 01/09/2022</p>
         </section>
         <!-- 3ème grid -->
         <section class="flex flex-row justify-end pr-10">
@@ -43,12 +44,47 @@
           </div>
         </section>
       </header>
-      <div>
-        <p class="text-lg font-thin">Mes Dépenses</p>
-      </div>
-      <div class="flex justify-center">
-        <h2>2022</h2>
-      </div>
+      <section class="flex flex-col items-center justify-end h-24">
+        <h2 class="uppercase text-lg">2022</h2>
+        <p class="uppercase text-lg font-bold">Dépôt / Retrait</p>
+      </section>
+      <section class="h-max">
+        <div class="mt-10">
+          <pre>
+                      Titulaire du compte :
+                      <span class="italic text-xs opacity-50">nom et prénom du titulaire</span>
+          </pre>
+        </div>
+      </section>
+        <section class="flex flex-col justify-around items-center text-lg uppercase h-72">
+          <div>
+            <h2>Code banque :</h2>
+          </div>
+          <div>
+            <h2>Code Guichet :</h2>
+          </div>
+          <div>
+            <h2>Numéro de compte :</h2>
+          </div>
+          <div>
+            <h2>Clé RIB :</h2>
+          </div>
+          <div>
+            <h2>IBAN :</h2>
+          </div>
+          <div>
+            <h2>BIC :</h2>
+          </div>
+        </section>
+        <section class="flex justify-center mt-16">
+          <form class="text-xl">
+            <label for="">Dépôt d'argent</label>
+            <input type="number" id="deposit-money" class=" bg-yellow-700">
+            <label for="">Retrait d'argent</label>
+            <input type="number" id="get-money" class=" bg-yellow-700">
+            <button type="button" id="submit-money"></button>
+          </form>
+        </section>
     </div>
   </body>
 </html>
