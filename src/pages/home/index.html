@@ -58,32 +58,35 @@
       </section>
         <section class="flex flex-col justify-around items-center text-lg uppercase h-72">
           <div>
-            <h2>Code banque :</h2>
+            <h2>Code banque : <span id="results-bank"></span></h2>
           </div>
           <div>
-            <h2>Code Guichet :</h2>
+            <h2>Code Guichet : <span id="results-counter"></span></h2>
           </div>
           <div>
-            <h2>Numéro de compte :</h2>
+            <h2>Numéro de compte : <span id="results-account"></span></h2>
           </div>
           <div>
-            <h2>Clé RIB :</h2>
+            <h2>Clé RIB : <span id="results-rib"></span></h2>
           </div>
           <div>
-            <h2>IBAN :</h2>
+            <h2>IBAN : <span id="results-iban"></span></h2>
           </div>
           <div>
-            <h2>BIC :</h2>
+            <h2>BIC : <span id="results-bic"></span></h2>
           </div>
         </section>
         <section class="flex justify-center mt-16">
           <form class="text-xl">
-            <label for="">Dépôt d'argent</label>
+            <label for="deposit-money">Dépôt d'argent</label>
             <input type="number" id="deposit-money" class=" bg-yellow-700">
-            <label for="">Retrait d'argent</label>
+            <label for="cash-withdrawal">Retrait d'argent</label>
             <input type="number" id="get-money" class=" bg-yellow-700">
             <button type="button" id="submit-money"></button>
           </form>
+        </section>
+        <section class="flex justify-center items-end h-20">
+          <button type="button" id="btn-reset" class="border-2 border-yellow-800">GENERATE CODE RANDOM</button>
         </section>
     </div>
   </body>
