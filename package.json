@@ -9,7 +9,9 @@
     "start:watch": "webpack --watch",
     "start:serve": "webpack serve --open",
     "start:tailwind": "tailwindcss -i ./src/assets/css/styles.css -o ./dist/output.css --watch",
-    "build": "webpack"
+    "build": "run-s build:**",
+    "build:webpack": "webpack",
+    "build:tailwind": "tailwindcss -i ./src/assets/css/styles.css -o ./dist/output.css"
   },
   "keywords": [],
   "author": "gorkemjs-171",
