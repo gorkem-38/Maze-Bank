@@ -7,6 +7,7 @@
     <title>Maze Bank</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <link rel="stylesheet" href="../../assets/css/output.css">
+    <script defer src="../../app.js"></script>
   </head>
   <body class="bg-gold">
     <div id="root">
@@ -29,7 +30,7 @@
         <!-- 2ème grid -->
         <section class="flex justify-center">
           <img src="../../assets/img/bitcoin-g0161e2bb6_1920.jpg" alt="bitcoin" width="200px">
-          <p>Mise à jour le 05/09/2022</p>
+          <p>Mise à jour le 07/09/2022</p>
         </section>
         <!-- 3ème grid -->
         <section class="flex flex-row justify-end pr-10">
@@ -58,35 +59,39 @@
       </section>
         <section class="flex flex-col justify-around items-center text-lg uppercase h-72">
           <div>
-            <h2>Code banque : <span id="results-bank"></span></h2>
+            <h2>Code banque : <span id="random-bank"></span></h2>
           </div> 
           <div>
-            <h2>Code Guichet : <span id="results-counter"></span></h2>
+            <h2>Code Guichet : <span id="random-counter"></span></h2>
           </div>
           <div>
-            <h2>Numéro de compte : <span id="results-account"></span></h2>
+            <h2>Numéro de compte : <span id="random-account"></span></h2>
           </div>
           <div>
-            <h2>Clé RIB : <span id="results-rib"></span></h2>
+            <h2>Clé RIB : <span id="random-rib"></span></h2>
           </div>
           <div>
-            <h2>IBAN : <span id="results-iban"></span></h2>
+            <h2>IBAN : <span id="random-iban"></span></h2>
           </div>
           <div>
-            <h2>BIC : <span id="results-bic"></span></h2>
+            <h2>BIC : <span id="random-bic"></span></h2>
           </div>
+        </section>
+        <section class="flex justify-center items-end h-16">
+          <p class="text-lg font-bold border border-l-red-600 border-t-fuchsia-500 border-r-amber-300 border-b-teal-500"><span id="result-sold">500</span><span id="after-sold"></span></p>
         </section>
         <section class="flex justify-center mt-16">
           <form class="text-xl">
             <label for="deposit-money">Dépôt d'argent</label>
             <input type="number" id="deposit-money" class=" bg-yellow-700">
+            <button type="button" id="submit-money" class="border-stone-800 border">Envoyer</button>
             <label for="cash-withdrawal">Retrait d'argent</label>
             <input type="number" id="get-money" class=" bg-yellow-700">
-            <button type="button" id="submit-money"></button>
+            <button type="button" id="withdraw-money" class="border-stone-800 border">Retirer</button>
           </form>
         </section>
         <section class="flex justify-center items-end h-20">
-          <button type="button" id="btn-reset" class="border-2 border-yellow-800">GENERATE CODE RANDOM</button>
+          <button type="button" id="btn-gen" class="border-2 border-yellow-800">GENERATE CODE RANDOM</button>
         </section>
     </div>
   </body>
