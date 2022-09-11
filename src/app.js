@@ -15,35 +15,31 @@ const randomRib = document.getElementById("random-rib");
 const randomIban = document.getElementById("random-iban");
 const randomBic = document.getElementById("random-bic");
 
-randomBank.innerHTML = getRandom(10000, 99999);
-randomCounter.innerHTML = getRandom(1000, 9999);
-randomAccount.innerHTML = getRandom(11111111111, 99999999999);
-randomRib.innerHTML = getRandom(10, 99);
-randomIban.innerHTML = `FR` + getRandom(759999999999, 770000000000);
-randomBic.innerHTML = `AGRIPFR` + getRandom(1,9);
+const buttonRandom = () => {
+  randomBank.innerHTML = getRandom(10000, 99999);
+  randomCounter.innerHTML = getRandom(1000, 9999);
+  randomAccount.innerHTML = getRandom(11111111111, 99999999999);
+  randomRib.innerHTML = getRandom(10, 99);
+  randomIban.innerHTML = `FR` + getRandom(759999999999, 770000000000);
+  randomBic.innerHTML = `AGRIPFR` + getRandom(1,9);
+};
+
+const buttonGen = document.getElementById("btn-gen");
+buttonGen.addEventListener("click", buttonRandom);
+
 
 const depoCash = document.getElementById("deposit-money");
 const buttonDepo = document.getElementById("submit-money");
 const withdrawCash = document.getElementById("get-money");
 const buttonWithdraw = document.getElementById("withdraw-money");
 
-let currSold = document.getElementById("curr-sold");
+let currSold = 0;
 
-const buttonGen = document.getElementById("btn-gen");
 
 const addSold = () => {
-  if (currSold <= 0) {
-    let results = parseInt(buttonDepo.value);
-    let total = (currSold += results);
-    currSold.innerHTML = total;
-    return total
-  } else (currSold >= 0) 
-  {
-    let results = parseInt(buttonDepo.value);
-    let total = (currSold += results);
-    currSold.innerHTML = total;
-    return total
-  };
+  let results = parseInt(depoCash.value);
+  let total = currSold + results;
+  
 };
 
 buttonDepo.addEventListener("click", addSold);
