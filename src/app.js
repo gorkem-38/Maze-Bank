@@ -33,13 +33,22 @@ const buttonDepo = document.getElementById("submit-money");
 const withdrawCash = document.getElementById("get-money");
 const buttonWithdraw = document.getElementById("withdraw-money");
 
-let currSold = 0;
+let currSold = document.getElementById("curr-sold");
 
 
 const addSold = () => {
-  let results = parseInt(depoCash.value);
-  let total = currSold + results;
-  
+  if (currSold < 1) {
+    let results = parseInt(depoCash.value);
+    let total = (currSold += results);
+    currSold.innerHTML = total
+    return total;
+  } else currSold > 1
+  {
+    let results = parseInt(depoCash.value);
+    let total = (currSold += results);
+    currSold.innerHTML = total
+    return total;
+  }
 };
 
 buttonDepo.addEventListener("click", addSold);
