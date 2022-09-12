@@ -37,8 +37,8 @@ const resultsSold = document.getElementById("results-sold");
 let currentSold = 0;
 
 const addSold = () => {
-    let results = parseInt(depoCash.value);
-    let total = (currentSold += results);
+    let value = parseInt(depoCash.value);
+    let total = (currentSold += value);
     resultsSold.innerHTML = total;
     return total;
 };
@@ -46,8 +46,8 @@ const addSold = () => {
 buttonDepo.addEventListener("click", addSold);
 
 const withdrawSold = () => {
-  let results = parseInt(withdrawCash.value);
-  let total = (currentSold -= results);
+  let value = parseInt(withdrawCash.value);
+  let total = (currentSold -= value);
   resultsSold.innerHTML = total;
   return total;
 };
