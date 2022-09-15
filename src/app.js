@@ -33,6 +33,8 @@ const buttonDepo = document.getElementById("submit-money");
 const withdrawCash = document.getElementById("get-money");
 const buttonWithdraw = document.getElementById("withdraw-money");
 
+const exposed = document.getElementById("exposed");
+
 const resultsSold = document.getElementById("results-sold");
 let currentSold = 0;
 
@@ -46,10 +48,10 @@ const addSold = () => {
 buttonDepo.addEventListener("click", addSold);
 
 const withdrawSold = () => {
-  let value = parseInt(withdrawCash.value);
-  let total = (currentSold -= value);
-  resultsSold.innerHTML = total;
-  return total;
+    let value = parseInt(withdrawCash.value);
+    let total = (currentSold -= value);
+    resultsSold.innerHTML = total;
+    return total;
 };
 
 buttonWithdraw.addEventListener("click", withdrawSold);
