@@ -1,8 +1,8 @@
 // Fontawesome @import
 import '@fortawesome/fontawesome-free/js/all';
-import { add, max, parseInt } from 'lodash';
 //  Tailwind @import
 import "./assets/css/styles.css";
+import test from './components/decouvert';
 
 const getRandom = (min, max) => {
   return Math.floor(Math.random() * (max - min));
@@ -54,5 +54,14 @@ const addSold = () => {
 
 buttonWithdraw.addEventListener("click", withdrawSold);
 
+// const test = () => {
+//   let currSold = -50;
+//   let overDraft = -50;
+//   if (currSold < overDraft){
+//       console.log("retrait impossible");
+//   } else {
+//       console.log("retrait possible");
+//   };
+// };
 
-const exposed = document.getElementById("exposed");
+// export default test;
