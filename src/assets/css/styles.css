@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-gold {
-    background-color: #866121;
+.bg-light {
+    background-color: #cec6f6;
 }

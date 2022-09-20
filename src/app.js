@@ -2,7 +2,6 @@
 import '@fortawesome/fontawesome-free/js/all';
 //  Tailwind @import
 import "./assets/css/styles.css";
-import test from './components/decouvert';
 
 const getRandom = (min, max) => {
   return Math.floor(Math.random() * (max - min));
@@ -58,10 +57,10 @@ buttonWithdraw.addEventListener("click", withdrawSold);
 //   let currSold = -50;
 //   let overDraft = -50;
 //   if (currSold < overDraft){
-//       console.log("retrait impossible");
+//       return "retrait impossible";
 //   } else {
-//       console.log("retrait possible");
+//       return "retrait possible";
 //   };
 // };
 
-// export default test;
+// test();
