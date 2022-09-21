@@ -3,6 +3,7 @@ import '@fortawesome/fontawesome-free/js/all';
 //  Tailwind @import
 import "./assets/css/styles.css";
 
+// Generate random numbers
 const getRandom = (min, max) => {
   return Math.floor(Math.random() * (max - min));
 };
@@ -43,7 +44,10 @@ const addSold = () => {
   };
   
   buttonDepo.addEventListener("click", addSold);
-  
+  depoCash.addEventListener("keydown", (key) => {
+    key.code === "Enter", "NumpadEnter" ? addSold() : "";
+  });
+
   const withdrawSold = () => {
     let value = parseInt(withdrawCash.value);
     let total = (currentSold -= value);
@@ -52,15 +56,9 @@ const addSold = () => {
 };
 
 buttonWithdraw.addEventListener("click", withdrawSold);
+withdrawCash.addEventListener("keydown", (key) => {
+  key.code === "Enter", "NumpadEnter" ? withdrawSold() : "";
+});
 
-// const test = () => {
-//   let currSold = -50;
-//   let overDraft = -50;
-//   if (currSold < overDraft){
-//       return "retrait impossible";
-//   } else {
-//       return "retrait possible";
-//   };
-// };
 
-// test();
+// const msgOverdraft = document.getElementById("msg-overdraft");
