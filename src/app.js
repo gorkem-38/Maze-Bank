@@ -34,30 +34,31 @@ const withdrawCash = document.getElementById("get-money");
 const buttonWithdraw = document.getElementById("withdraw-money");
 
 const resultsSold = document.getElementById("results-sold");
+
 let currentSold = 0;
 
 const addSold = () => {
-    let value = parseInt(depoCash.value);
-    let total = (currentSold += value);
-    resultsSold.innerHTML = total;
-    return total;
-  };
+  let value = parseInt(depoCash.value);
+  let total = (currentSold += value);
+  resultsSold.innerHTML = total;
+  return total;
+};
   
-  buttonDepo.addEventListener("click", addSold);
-  depoCash.addEventListener("keydown", (key) => {
-    key.code === "Enter", "NumpadEnter" ? addSold() : "";
-  });
+buttonDepo.addEventListener("click", addSold);
+depoCash.addEventListener("keydown", (key) => {
+  key.code === "Enter" || key.code === "NumpadEnter" ? addSold() : "";
+});
 
-  const withdrawSold = () => {
-    let value = parseInt(withdrawCash.value);
-    let total = (currentSold -= value);
-    resultsSold.innerHTML = total;
-    return total;
+const withdrawSold = () => {
+  let value = parseInt(withdrawCash.value);
+  let total = (currentSold -= value);
+  resultsSold.innerHTML = total;
+  return total;
 };
 
 buttonWithdraw.addEventListener("click", withdrawSold);
 withdrawCash.addEventListener("keydown", (key) => {
-  key.code === "Enter", "NumpadEnter" ? withdrawSold() : "";
+  key.code === "Enter" || key.code === "NumpadEnter" ? withdrawSold() : "";
 });
 
 

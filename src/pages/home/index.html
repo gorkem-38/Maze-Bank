@@ -80,14 +80,18 @@
         <div class="flex justify-center">
           <span id="msg-overdraft" class="font-light"></span>
         </div>
-        <section class="flex justify-center mt-16">
-          <form class="text-xl">
-            <label for="deposit-money">Dépôt d'argent</label>
-            <input type="number" id="deposit-money" class="bg-emerald-100">
-            <button type="button" id="submit-money" class=" border">Envoyer</button>
-            <label for="cash-withdrawal">Retrait d'argent</label>
-            <input type="number" id="get-money" class="bg-emerald-100">
-            <button type="button" id="withdraw-money" class=" border">Retirer</button>
+        <section class="mt-16">
+          <form class="flex flex-row justify-center text-xl">
+            <div class="pr-20">
+              <label for="deposit-money">Dépôt d'argent</label>
+              <input type="number" id="deposit-money" class="bg-emerald-100">
+              <button type="button" id="submit-money" class="border border-zinc-800">Envoyer</button>
+            </div>
+            <div>
+              <label for="cash-withdrawal">Retrait d'argent</label>
+              <input type="number" id="get-money" class="bg-emerald-100">
+              <button type="button" id="withdraw-money" class="border border-zinc-800">Retirer</button>
+            </div>
           </form>
         </section>
         <section class="flex justify-center items-end h-20">
