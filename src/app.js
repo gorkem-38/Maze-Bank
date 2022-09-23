@@ -3,11 +3,12 @@ import '@fortawesome/fontawesome-free/js/all';
 //  Tailwind @import
 import "./assets/css/styles.css";
 
-// Generate random numbers
+// Generate random numbers function
 const getRandom = (min, max) => {
   return Math.floor(Math.random() * (max - min));
 };
 
+// Get Id and random numbers function
 const randomBank = document.getElementById("random-bank");
 const randomCounter = document.getElementById("random-counter");
 const randomAccount = document.getElementById("random-account");
@@ -24,16 +25,20 @@ const buttonRandom = () => {
   randomBic.innerHTML = `AGRIPFR` + getRandom(1,9);
 };
 
-const buttonGen = document.getElementById("btn-gen");
-buttonGen.addEventListener("click", buttonRandom);
+const buttonGenerate = document.getElementById("btn-gen");
+buttonGenerate.addEventListener("click", buttonRandom);
 
+////////////////////////////////////////
 
+// Get Id button and input
 const depoCash = document.getElementById("deposit-money");
 const buttonDepo = document.getElementById("submit-money");
 const withdrawCash = document.getElementById("get-money");
 const buttonWithdraw = document.getElementById("withdraw-money");
 
 const resultsSold = document.getElementById("results-sold");
+
+////////////////////////////////////////
 
 let currentSold = 0;
 
@@ -62,4 +67,18 @@ withdrawCash.addEventListener("keydown", (key) => {
 });
 
 
-// const msgOverdraft = document.getElementById("msg-overdraft");
+// Overdraft message -200
+const msgOverdraft = document.getElementById("msg-overdraft");
+let soldNegative = 0;
+
+const overdraft = () => {
+  let value = parseInt(withdrawCash.value);
+  let newSold = (soldNegative -= value);
+  let overdraft = -300;
+  msgOverdraft.textContent = newSold;
+  if (newSold < -200) {
+    console.log("50");
+  }
+};
+
+console.log(overdraft());
