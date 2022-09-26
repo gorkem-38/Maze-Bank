@@ -56,28 +56,38 @@
           <div class="flex flex-col items-center justify-center">
             <p class="pb-4">Save your data</p>
             <div>
-              <input type="text" placeholder="first name" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-red-400">
+              <input type="text" placeholder="first name" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
             </div>
             <div class="py-4">
-              <input type="text" placeholder="last name" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-red-400">
+              <input type="text" placeholder="last name" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
             </div>
             <div>
-              <input type="text" placeholder="number account" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-red-400">
+              <input type="text" placeholder="number account" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
             </div>
             <div class="py-4">
-              <input type="text" placeholder="iban" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-red-400">
+              <input type="text" placeholder="iban" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
             </div>
             <div>
-              <input type="text" placeholder="bic" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-red-400">
+              <input type="text" placeholder="bic" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
             </div>
           </div>
-          <div class="flex flex-col items-center">
-            <h2>compte beneficiaire</h2>
-            <span id="result-fname"></span>
-            <span id="result-lname"></span>
-            <span id="result-account"></span>
-            <span id="result-iban"></span>
-            <span id="result-bic"></span>
+          <div class="flex flex-col items-center border-4 border-green-700 mr-4">
+            <h2 class="pb-10">compte beneficiaire</h2>
+            <div class="flex justify-start w-96">
+              <p>first name<span id="result-fname"></span></p>
+            </div>
+            <div>
+              <span id="result-lname"></span>
+            </div>
+            <div>
+              <span id="result-account"></span>
+            </div>
+            <div>
+              <span id="result-iban"></span>
+            </div>
+            <div>
+              <span id="result-bic"></span>
+            </div>
             <p class="text-lg font-bold border border-l-red-600 border-t-fuchsia-500 border-r-amber-300 border-b-teal-500"><span id="results-sold"></span></p>
           </div>
         </section>
