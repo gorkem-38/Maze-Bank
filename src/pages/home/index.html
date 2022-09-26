@@ -5,39 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maze Bank</title>
-    <link rel="stylesheet" href="../../assets/css/styles.css">
     <link rel="stylesheet" href="../../assets/css/output.css">
-    <script defer src="../../app.js"></script>
   </head> 
-  <body class="bg-light">
-    <div id="root">
+  <body class="bg-mazebank bg-center bg-cover uppercase font-semibold ">
+    <div id="root" class="h-screen backdrop-blur">
       <header class="grid grid-cols-3 h-20">
-        <section class="flex flex-row justify-around pl-7 w-48">
+        <section class="flex flex-row justify-around pl-7 mt-2 w-48">
           <div>
-            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-house fa-xl"></i>
           </div>
           <div>
-            <i class="fa-solid fa-calendar px-2"></i>
+            <i class="fa-solid fa-calendar fa-xl px-2"></i>
           </div>
           <div>
-            <i class="fa-solid fa-envelope pr-2"></i>
+            <i class="fa-solid fa-envelope fa-xl pr-2"></i>
           </div>
           <div>
-            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-bell fa-xl"></i>
           </div>
         </section>
         <section class="flex justify-center">
           <h1 class="font-bold uppercase text-5xl">maze bank</h1>
         </section>
-        <section class="flex flex-row justify-end pr-10">
+        <section class="flex flex-row justify-end pr-10 mt-2">
           <div>
-            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-moon fa-xl"></i>
           </div>
           <div class=" px-10">
-            <i class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-gear fa-xl"></i>
           </div>
           <div>
-            <i class="fa-solid fa-rotate"></i>
+            <i class="fa-solid fa-rotate fa-xl"></i>
           </div>
         </section>
       </header>
@@ -65,13 +63,13 @@
             <h2>Numéro de compte : <span id="random-account"></span></h2>
           </div>
           <div>
-            <h2>Clé RIB : <span id="random-rib"></span></h2>
+            <h2 class="text-teal-400">Clé RIB : <span id="random-rib"></span></h2>
           </div>
           <div>
-            <h2>IBAN : <span id="random-iban"></span></h2>
+            <h2 class="text-teal-400">IBAN : <span id="random-iban"></span></h2>
           </div>
           <div>
-            <h2>BIC : <span id="random-bic"></span></h2>
+            <h2 class="text-teal-400">BIC : <span id="random-bic"></span></h2>
           </div>
         </section>
         <section class="flex flex-col justify-center items-center h-16">
@@ -82,20 +80,20 @@
         </div>
         <section class="mt-16">
           <form class="flex flex-row justify-center text-xl">
-            <div class="pr-20">
+            <div class="pr-20 text-teal-400">
               <label for="deposit-money">Dépôt d'argent</label>
               <input type="number" id="deposit-money" class="bg-emerald-100">
               <button type="button" id="submit-money" class="border border-zinc-800">Envoyer</button>
             </div>
-            <div>
+            <div class="text-teal-400">
               <label for="cash-withdrawal">Retrait d'argent</label>
               <input type="number" id="get-money" class="bg-emerald-100">
               <button type="button" id="withdraw-money" class="border border-zinc-800">Retirer</button>
             </div>
           </form>
         </section>
-        <section class="flex justify-center items-end h-20">
-          <button type="button" id="btn-gen" class="border-2">GENERATE CODE RANDOM</button>
+        <section class="flex justify-center items-end text-teal-400 h-20">
+          <button type="button" id="btn-gen" class="border-4 border-green-400">GENERATE CODE RANDOM</button>
         </section>
     </div>
   </body>

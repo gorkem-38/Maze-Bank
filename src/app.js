@@ -68,8 +68,24 @@ withdrawCash.addEventListener("keydown", (key) => {
 
 
 // Overdraft message -200
-// const msgOverdraft = document.getElementById("msg-overdraft");
-// let soldNegative = 0;
+const msgOverdraft = document.getElementById("msg-overdraft");
+let sold = 0;
+
+const overdraft = () => {
+  let currSold = -200;
+  let overDraft = -20;
+  if (currSold < overDraft){
+      msgOverdraft.classList.add("block");
+      msgOverdraft.style.color = "red";
+      msgOverdraft.textContent = "";
+  } else {
+    msgOverdraft.classList.add("block");
+    msgOverdraft.style.color = "red";
+    msgOverdraft.textContent = "Vous êtes à découvert !";
+  };
+};
+
+overdraft()
 
 // const overdraft = () => {
 //   let value = parseInt(withdrawCash.value);

@@ -2,6 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-light {
-    background-color: #f6d0d0;
-}
