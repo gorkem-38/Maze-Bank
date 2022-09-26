@@ -68,17 +68,17 @@ withdrawCash.addEventListener("keydown", (key) => {
 
 
 // Overdraft message -200
-const msgOverdraft = document.getElementById("msg-overdraft");
-let soldNegative = 0;
+// const msgOverdraft = document.getElementById("msg-overdraft");
+// let soldNegative = 0;
 
-const overdraft = () => {
-  let value = parseInt(withdrawCash.value);
-  let newSold = (soldNegative -= value);
-  let overdraft = -300;
-  msgOverdraft.textContent = newSold;
-  if (newSold < -200) {
-    console.log("50");
-  }
-};
+// const overdraft = () => {
+//   let value = parseInt(withdrawCash.value);
+//   let newSold = (soldNegative -= value);
+//   let overdraft = -300;
+//   msgOverdraft.textContent = newSold;
+//   if (newSold < -200) {
+//     console.log("50");
+//   }
+// };
 
-console.log(overdraft());
+// console.log(overdraft());
