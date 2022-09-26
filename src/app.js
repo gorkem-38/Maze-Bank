@@ -8,6 +8,32 @@ const getRandom = (min, max) => {
   return Math.floor(Math.random() * (max - min));
 };
 
+// async function afficherDate() {
+//   while (true) {
+//     await pause(1000);
+//     var cejour = new Date();
+//     var options = {
+//       weekday: "long",
+//       year: "numeric",
+//       month: "long",
+//       day: "2-digit",
+//     };
+//     var date = cejour.toLocaleDateString("fr-FR", options);
+//     var heure =
+//       ("0" + cejour.getHours()).slice(-2) +
+//       ":" +
+//       ("0" + cejour.getMinutes()).slice(-2) +
+//       ":" +
+//       ("0" + cejour.getSeconds()).slice(-2);
+//     var dateheure = date + " " + heure;
+//     var dateheure = dateheure.replace(/(^\w{1})|(\s+\w{1})/g, (lettre) =>
+//       lettre.toUpperCase()
+//     );
+//     document.getElementById("dateheure").innerHTML = dateheure;
+//   }
+// }
+// afficherDate();
+
 // Get Id and random numbers function
 const randomBank = document.getElementById("random-bank");
 const randomCounter = document.getElementById("random-counter");
@@ -63,33 +89,46 @@ const withdrawSold = () => {
 
 buttonWithdraw.addEventListener("click", withdrawSold);
 withdrawCash.addEventListener("keydown", (key) => {
-  key.code === "Enter" || key.code === "NumpadEnter" ? withdrawSold() : "";
+  key.code === "Enter" || key.code === "NumpadEnter" ? withdrawSold() : ""
 });
 
 
 // Overdraft message -200
-const msgOverdraft = document.getElementById("msg-overdraft");
-let sold = 0;
 
-const overdraft = () => {
-  let currSold = -200;
-  let overDraft = -20;
-  if (currSold < overDraft){
-      msgOverdraft.classList.add("block");
-      msgOverdraft.style.color = "red";
-      msgOverdraft.textContent = "";
-  } else {
-    msgOverdraft.classList.add("block");
-    msgOverdraft.style.color = "red";
-    msgOverdraft.textContent = "Vous êtes à découvert !";
-  };
-};
+const beneficiary = document.getElementById("account-received")
 
-overdraft()
+let beneficiarySold = 0;
+
+const transfer = document.getElementById("transfer");
+transfer.addEventListener("keydown", (key) => {
+    let value = parseInt(transfer.value);
+    let total = value += beneficiarySold;
+    beneficiary.innerHTML = total;
+    key.code === "Enter" || key.code === "NumpadEnter" ? transfer() : ""
+});
+
+// const msgOverdraft = document.getElementById("msg-overdraft");
+// let sold = 0;
 
 // const overdraft = () => {
-//   let value = parseInt(withdrawCash.value);
-//   let newSold = (soldNegative -= value);
+//   let currSold = -200;
+//   let overDraft = -20;
+//   if (currSold < overDraft){
+//       msgOverdraft.classList.add("block");
+//       msgOverdraft.style.color = "red";
+//       msgOverdraft.textContent = "";
+//   } else {
+//     msgOverdraft.classList.add("block");
+//     msgOverdraft.style.color = "red";
+//     msgOverdraft.textContent = "Vous êtes à découvert !";
+//   };
+// };
+
+// overdraft()
+
+// const overdraft = () => {
+  //   let value = parseInt(withdrawCash.value);
+  //   let newSold = (soldNegative -= value);
 //   let overdraft = -300;
 //   msgOverdraft.textContent = newSold;
 //   if (newSold < -200) {

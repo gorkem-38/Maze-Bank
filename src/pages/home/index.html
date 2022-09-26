@@ -25,7 +25,8 @@
           </div>
         </section>
         <section class="flex justify-center">
-          <h1 class="font-bold uppercase text-5xl">maze bank</h1>
+          <img src="../../assets/img/maze-bank-logo.png" alt="mazebank" width="8%" class="absolute mt-7" height="auto">
+          <h1 class="font-bold uppercase text-5xl">maze <span class="text-red-700">bank</span></h1>
         </section>
         <section class="flex flex-row justify-end pr-10 mt-2">
           <div>
@@ -39,60 +40,65 @@
           </div>
         </section>
       </header>
-      <section class="flex flex-col items-center justify-end h-24">
+      <section class="flex flex-col items-center justify-end h-24 mt-12">
         <h2 class="uppercase text-lg">2022</h2>
-        <p class="uppercase text-lg font-bold">Dépôt / Retrait</p>
+        <p class="uppercase text-lg font-extrabold">Virement au beneficiare</p>
       </section>
-      <section class="h-max">
-        <div class="flex justify-center w-2/5 mt-10">
-          <p class="flex flex-col">
-            Titulaire du compte :
-            <span class="italic text-xs opacity-50">nom et prénom du titulaire</span>
-          </p>
-          <input id="user-holder" type="text" class="bg-emerald-100 h-6 ml-2">
-        </div>
-      </section>
-        <section class="flex flex-col justify-around items-center text-lg uppercase h-72">
-          <div>
+        <section class="grid grid-cols-3 text-lg uppercase h-96 mt-10">
+          <div class="flex flex-col justify-between pl-4">
             <h2>Code banque : <span id="random-bank"></span></h2>
-          </div> 
-          <div>
             <h2>Code Guichet : <span id="random-counter"></span></h2>
-          </div>
-          <div>
             <h2>Numéro de compte : <span id="random-account"></span></h2>
-          </div>
-          <div>
             <h2 class="text-teal-400">Clé RIB : <span id="random-rib"></span></h2>
-          </div>
-          <div>
             <h2 class="text-teal-400">IBAN : <span id="random-iban"></span></h2>
-          </div>
-          <div>
             <h2 class="text-teal-400">BIC : <span id="random-bic"></span></h2>
           </div>
-        </section>
-        <section class="flex flex-col justify-center items-center h-16">
-          <p class="text-lg font-bold border border-l-red-600 border-t-fuchsia-500 border-r-amber-300 border-b-teal-500"><span id="results-sold"></span></p>
+          <div class="flex flex-col items-center justify-center">
+            <p class="pb-4">Save your data</p>
+            <div>
+              <input type="text" placeholder="first name" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-red-400">
+            </div>
+            <div class="py-4">
+              <input type="text" placeholder="last name" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-red-400">
+            </div>
+            <div>
+              <input type="text" placeholder="number account" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-red-400">
+            </div>
+            <div class="py-4">
+              <input type="text" placeholder="iban" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-red-400">
+            </div>
+            <div>
+              <input type="text" placeholder="bic" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-red-400">
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <h2>compte beneficiaire</h2>
+            <span id="result-fname"></span>
+            <span id="result-lname"></span>
+            <span id="result-account"></span>
+            <span id="result-iban"></span>
+            <span id="result-bic"></span>
+            <p class="text-lg font-bold border border-l-red-600 border-t-fuchsia-500 border-r-amber-300 border-b-teal-500"><span id="results-sold"></span></p>
+          </div>
         </section>
         <div class="flex justify-center">
           <span id="msg-overdraft" class="font-light"></span>
         </div>
         <section class="mt-16">
           <form class="flex flex-row justify-center text-xl">
-            <div class="pr-20 text-teal-400">
-              <label for="deposit-money">Dépôt d'argent</label>
-              <input type="number" id="deposit-money" class="bg-emerald-100">
-              <button type="button" id="submit-money" class="border border-zinc-800">Envoyer</button>
+            <div class="pr-20">
+              <label for="deposit-money" class="text-white">Dépôt d'argent</label>
+              <input type="number" id="deposit-money" class="bg-emerald-100 pl-1">
+              <button type="button" id="submit-money" class="border border-zinc-800 text-teal-400">Envoyer</button>
             </div>
-            <div class="text-teal-400">
-              <label for="cash-withdrawal">Retrait d'argent</label>
-              <input type="number" id="get-money" class="bg-emerald-100">
-              <button type="button" id="withdraw-money" class="border border-zinc-800">Retirer</button>
+            <div class="">
+              <label for="cash-withdrawal" class="text-white">Retrait d'argent</label>
+              <input type="number" id="get-money" class="bg-emerald-100 pl-1">
+              <button type="button" id="withdraw-money" class="border border-zinc-800 text-red-600">Retirer</button>
             </div>
           </form>
         </section>
-        <section class="flex justify-center items-end text-teal-400 h-20">
+        <section class="flex justify-center items-end text-teal-400 h-20 mb-6">
           <button type="button" id="btn-gen" class="border-4 border-green-400">GENERATE CODE RANDOM</button>
         </section>
     </div>
