@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'mazebank': "url('../img/maze-bank.jpg')",
+        'mazebank': "url('../img/maze-bank-tower.jpg')",
       }
     },
   },
