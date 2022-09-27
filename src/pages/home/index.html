@@ -7,68 +7,64 @@
       <title>Maze Bank</title>
       <link rel="stylesheet" href="../../assets/css/output.css">
    </head>
-   <body class="bg-mazebank bg-center bg-cover bg-no-repeat uppercase font-semibold ">
+   <body class="bg-mazebank bg-center bg-cover bg-no-repeat uppercase font-semibold overflow-x-hidden ">
       <div id="root" class="h-full backdrop-blur">
-         <!-- Header -->
-         <header class="grid grid-cols-3 h-20">
-            <section class="flex flex-row justify-around pl-7 mt-2 w-48">
+      <!-- Header -->
+         <header class="xl:grid xl:grid-cols-3 xl:h-20">
+            <section class="xl:flex xl:flex-row xl:justify-around xl:pl-7 xl:mt-3 xl:w-80">
                <div>
-                  <i class="fa-solid fa-house fa-xl"></i>
+                  <i class="xl:fa-solid xl:fa-house xl:fa-xl"></i>
                </div>
                <div>
-                  <i class="fa-solid fa-calendar fa-xl px-2"></i>
+                  <i class="xl:fa-solid xl:fa-calendar xl:fa-xl xl:px-2"></i>
                </div>
                <div>
-                  <i class="fa-solid fa-envelope fa-xl pr-2"></i>
+                  <i class="xl:fa-solid xl:fa-envelope xl:fa-xl xl:fa-bounce xl:pr-2"></i>
                </div>
                <div>
-                  <i class="fa-solid fa-bell fa-xl"></i>
+                  <i class="xl:fa-solid xl:fa-bell xl:fa-shake xl:fa-xl"></i>
                </div>
             </section>
-            <section class="flex justify-center">
-               <img src="../../assets/img/maze-bank-logo.png" alt="mazebank" width="8%" class="absolute mt-7" height="auto">
-               <h1 class="font-bold uppercase text-5xl">maze <span class="text-red-700">bank</span></h1>
+            <section class="xl:flex xl:justify-center">
+               <img src="../../assets/img/maze-bank-logo.png" alt="mazebank" width="8%" class="xl:absolute xl:mt-7" height="auto">
+               <h1 class="xl:font-bold xl:uppercase xl:text-5xl">maze <span class="xl:text-red-700">bank</span></h1>
             </section>
-            <section class="flex flex-row justify-end pr-10 mt-2">
+            <section class="xl:flex xl:flex-row xl:justify-end xl:pr-10 xl:mt-3 xl:w-11/12">
                <div>
-                  <i class="fa-solid fa-moon fa-xl"></i>
+                  <i class="xl:fa-solid xl:fa-moon xl:fa-xl"></i>
                </div>
-               <div class=" px-10">
-                  <i class="fa-solid fa-gear fa-xl"></i>
+               <div class=" xl:px-10">
+                  <i class="xl:fa-solid xl:fa-cog xl:fa-spin xl:fa-xl"></i>
                </div>
                <div>
-                  <i class="fa-solid fa-rotate fa-xl"></i>
+                  <i class="xl:fa-solid xl:fa-rotate xl:fa-xl"></i>
                </div>
             </section>
          </header>
          <!-- Header END -->
-         <section class="flex flex-col items-center justify-end h-24 mt-12">
-            <h2 class="uppercase text-lg">2022</h2>
-            <p class="uppercase text-lg font-extrabold">Virement au beneficiare</p>
-         </section>
-         <section class="grid grid-cols-2 text-lg uppercase h-96 mt-20">
-            <div class="flex flex-col items-center justify-center">
-               <p class="pb-4 text-red-700">Save your data</p>
+         <section class="xl:grid xl:grid-cols-2 xl:text-lg xl:uppercase xl:h-96 xl:mt-20">
+            <div class="xl:flex xl:flex-col xl:items-center xl:justify-center">
+               <p class="xl:pb-4 xl:text-red-700">Save your data</p>
                <div>
-                  <input id="input-fname" type="text" placeholder="first name" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
+                  <input id="input-fname" type="text" placeholder="first name" class="xl:placeholder:text-center xl:placeholder:uppercase xl:placeholder:font-thin xl:placeholder:text-gray-400">
                </div>
                <div class="py-4">
-                  <input id="input-lname" type="text" placeholder="last name" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
+                  <input id="input-lname" type="text" placeholder="last name" class="xl:placeholder:text-center xl:placeholder:uppercase xl:placeholder:font-thin xl:placeholder:text-gray-400">
                </div>
                <div>
-                  <input id="input-account" type="text" placeholder="number account" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
+                  <input id="input-account" type="text" placeholder="number account" class="xl:placeholder:text-center xl:placeholder:uppercase xl:placeholder:font-thin xl:placeholder:text-gray-400">
                </div>
                <div class="py-4">
-                  <input id="input-iban" type="text" placeholder="iban" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
+                  <input id="input-iban" type="text" placeholder="iban" class="xl:placeholder:text-center xl:placeholder:uppercase xl:placeholder:font-thin xl:placeholder:text-gray-400">
                </div>
                <div>
-                  <input id="input-bic" type="text" placeholder="bic" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
+                  <input id="input-bic" type="text" placeholder="bic" class="xl:placeholder:text-center xl:placeholder:uppercase xl:placeholder:font-thin xl:placeholder:text-gray-400">
                </div>
                <div class="pt-4">
-                  <input id="input-sold" type="text" placeholder="sold" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
+                  <input id="input-sold" type="text" placeholder="sold" class="xl:placeholder:text-center xl:placeholder:uppercase xl:placeholder:font-thin xl:placeholder:text-gray-400">
                </div>
                <div class="pt-8">
-                  <button id="btn-submit" type="button" class="border-4 text-white">Send</button>
+                  <button id="btn-submit" type="button" class="xl:border-4 xl:text-cyan-300 xl:px-4">Send</button>
                </div>
             </div>
             <div class="flex flex-col items-center justify-between pl-4 pt-6">
@@ -79,7 +75,7 @@
                <h2>bic : <span id="random-bic"></span></h2>
                <h2>sold : <span id="random-sold">0$</span></h2>
                <section class="flex justify-center items-end text-amber-700 h-10 mb-6">
-               <button type="button" id="btn-gen" class="border-4 border-amber-700">GENERATE CODE RANDOM</button>
+                  <button type="button" id="btn-gen" class="border-4 border-amber-700 px-4">GENERATE CODE RANDOM</button>
                </section>
             </div>
          </section>
@@ -88,54 +84,64 @@
          </div>
          <section class="mt-16">
             <form class="flex flex-row justify-center text-xl">
-               <div class="pr-20">
-                  <label for="deposit-money" class="text-white">cash deposit</label>
-                  <input type="number" id="deposit-money" class="bg-emerald-100 pl-1">
-                  <button type="button" id="submit-money" class="border-4 border-cyan-100 text-teal-400">Send</button>
-               </div>
-               <div class="">
+              <div class="pr-20">
+                 <label for="deposit-money" class="text-white">cash deposit</label>
+                 <input type="number" id="deposit-money" class="bg-emerald-100 pl-1">
+                 <button type="button" id="submit-money" class="border-4 border-cyan-100 text-teal-400 px-4">Send</button>
+              </div>
+              <div class="">
                   <label for="cash-withdrawal" class="text-white">cash withdrawal</label>
                   <input type="number" id="get-money" class="bg-emerald-100 pl-1">
-                  <button type="button" id="withdraw-money" class="border-4 border-zinc-800 text-red-600">Withdraw</button>
+                  <button type="button" id="withdraw-money" class="border-4 border-zinc-800 text-red-600 px-4">Withdraw</button>
                </div>
             </form>
          </section>
          <!-- Beneficiary Account -->
-         <div class="text-white border-t-4 mt-16">
-            <div class="grid grid-cols-3">
-               <img src="../../assets/img/maze-bank-logo.png" alt="maze-bank-logo" height="auto" width="40%" class="pb-3">
-               <h2 class="col-span-2 text-3xl pt-4 pl-40">beneficiary account</h2>
-            </div>
-            <div class="grid grid-cols-2">
-               <div class="flex flex-col items-center">
-                  <label for="">choose a beneficiary :</label> 
-                  <br>
-                  <select class="text-black rounded-lg" name="beneficiary" id="beneficiary">
-                     <option value="">James</option>
-                     <option value="">Christian</option>
-                     <option value="">Alexa</option>
-                  </select>
-                  <p>first name :<span id="result-fname"></span></p>
-                  <p>last name :<span id="result-lname"></span></p>
-                  <p>account number :<span id="result-account"></span></p>
-                  <p>iban :<span id="result-iban"></span></p>
-                  <p>bic :<span id="result-bic"></span></p>
-               </div>
-               <div class="flex flex-col justify-around items-start w-72">
-                  <p>d<span id="result-fname"></span></p>
-                  <p>f<span id="result-lname"></span></p>
-                  <p>f<span id="result-account"></span></p>
-                  <p>f<span id="result-iban"></span></p>
-                  <p>h<span id="result-bic"></span></p>
-               </div>
-               <div class="flex justify-center items-center col-span-2">
-                  <p class="text-lg text-center font-bold w-20 h-6 border"><span id="results-sold"></span></p>
-               </div>
+         <div class="text-white border-t-4 mx-28 mt-16">
          </div>
-         <!-- Beneficiary Account END -->
-         <footer class="h-32 bg-black mt-20">
-            <h2>Copyright</h2>
-         </footer>
+         <section class="grid grid-cols-3 text-white">
+            <img src="../../assets/img/maze-bank-logo.png" alt="maze-bank-logo" height="auto" width="40%" class="pb-3">
+            <h2 class="col-span-2 text-3xl pt-4 pl-40 text-green-500">beneficiary account</h2>
+         </section>
+         <section class="grid grid-cols-2 h-80 text-white">
+            <div class="flex flex-row justify-center">
+               <div class="flex flex-row justify-around w-4/5">
+                  <div class="flex items-end h-20">
+                     <select class="text-black rounded-lg h-max bg-blue-200 border-4 border-double border-indigo-700" name="beneficiary" id="beneficiary">
+                        <option>-- Choose an option --</option>
+                        <optgroup label="men" class="text-blue-800">
+                           <option>James</option>
+                           <option>Christian</option>
+                        </optgroup>
+                        <optgroup label="woman" class="text-pink-700">
+                           <option>Alexa</option>
+                           <option>Zoe</option>
+                        </optgroup>
+                      </select>
+                  </div>
+                  <div class="flex flex-col justify-around h-56">
+                     <p class="pt-4">first name :<span id="result-fname"></span></p>
+                     <p>last name :<span id="result-lname"></span></p>
+                     <p>account number :<span id="result-account"></span></p>
+                     <p>iban :<span id="result-iban"></span></p>
+                     <p>bic :<span id="result-bic"></span></p>
+                  </div>
+               </div>
+            </div>
+            <!-- Beneficiary Account END -->
+            <!-- <footer class="bg-white h-32 mt-10">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores cumque aperiam adipisci impedit voluptates ad nihil dolorem ex tempore consectetur. Mollitia accusantium nisi veritatis fuga dolore eius aperiam explicabo id?</p>
+            </footer> -->
+            <div class="flex justify-center">
+               <div class="flex flex-col items-center text-lg">
+                  <label for="send-money" class="text-black">Cash transfer</label>
+                  <input id="" type="number" class="mx-96 h-8 text-black text-xl bg-emerald-100">
+                  <div class="flex justify-end pt-28">
+                     <button type="button" class="bg-red-700 border-4 uppercase px-4">Send money$</button>
+                  </div>
+               </div>
+            </div>
+         </section>
       </div>
    </body>
-</html>
+   </html>
