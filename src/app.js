@@ -8,47 +8,27 @@ const getRandom = (min, max) => {
   return Math.floor(Math.random() * (max - min));
 };
 
-// async function afficherDate() {
-//   while (true) {
-//     await pause(1000);
-//     var cejour = new Date();
-//     var options = {
-//       weekday: "long",
-//       year: "numeric",
-//       month: "long",
-//       day: "2-digit",
-//     };
-//     var date = cejour.toLocaleDateString("fr-FR", options);
-//     var heure =
-//       ("0" + cejour.getHours()).slice(-2) +
-//       ":" +
-//       ("0" + cejour.getMinutes()).slice(-2) +
-//       ":" +
-//       ("0" + cejour.getSeconds()).slice(-2);
-//     var dateheure = date + " " + heure;
-//     var dateheure = dateheure.replace(/(^\w{1})|(\s+\w{1})/g, (lettre) =>
-//       lettre.toUpperCase()
-//     );
-//     document.getElementById("dateheure").innerHTML = dateheure;
-//   }
-// }
-// afficherDate();
 
 // Get Id and random numbers function
-const randomBank = document.getElementById("random-bank");
-const randomCounter = document.getElementById("random-counter");
 const randomAccount = document.getElementById("random-account");
-const randomRib = document.getElementById("random-rib");
 const randomIban = document.getElementById("random-iban");
 const randomBic = document.getElementById("random-bic");
+const randomSold = document.getElementById("random-sold");
+
+const randomFname = document.getElementById("random-fname");
+const randomLname = document.getElementById("random-lname");
+
+// buttonGenerate.addEventListener("click", () => {
+//   let array = ["James", "Christian", "Alexa"];
+//   let array2 = ["Perry", "Alonso", "Jones"];
+//   return Math.random() (array + array2);
+// })
 
 const buttonRandom = () => {
-  randomBank.innerHTML = getRandom(10000, 99999);
-  randomCounter.innerHTML = getRandom(1000, 9999);
   randomAccount.innerHTML = getRandom(11111111111, 99999999999);
-  randomRib.innerHTML = getRandom(10, 99);
   randomIban.innerHTML = `FR` + getRandom(759999999999, 770000000000);
   randomBic.innerHTML = `AGRIPFR` + getRandom(1,9);
+  randomSold.innerHTML = getRandom(100, 300) + `$`;
 };
 
 const buttonGenerate = document.getElementById("btn-gen");
