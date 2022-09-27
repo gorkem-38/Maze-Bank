@@ -7,64 +7,64 @@
       <title>Maze Bank</title>
       <link rel="stylesheet" href="../../assets/css/output.css">
    </head>
-   <body class="bg-mazebank bg-center bg-cover bg-no-repeat uppercase font-semibold overflow-x-hidden ">
+   <body class="flex flex-row bg-mazebank bg-center bg-cover bg-no-repeat uppercase font-semibold overflow-x-hidden ">
       <div id="root" class="h-full backdrop-blur">
       <!-- Header -->
-         <header class="xl:grid xl:grid-cols-3 xl:h-20">
-            <section class="xl:flex xl:flex-row xl:justify-around xl:pl-7 xl:mt-3 xl:w-80">
+         <header class="lg:grid lg:grid-cols-3 lg:h-20">
+            <section class="hidden lg:flex lg:flex-row lg:justify-around lg:pl-7 lg:mt-3 lg:w-80">
                <div>
-                  <i class="xl:fa-solid xl:fa-house xl:fa-xl"></i>
+                  <i class="fa-solid fa-house fa-xl"></i>
                </div>
                <div>
-                  <i class="xl:fa-solid xl:fa-calendar xl:fa-xl xl:px-2"></i>
+                  <i class="fa-solid fa-calendar fa-xl px-2"></i>
                </div>
                <div>
-                  <i class="xl:fa-solid xl:fa-envelope xl:fa-xl xl:fa-bounce xl:pr-2"></i>
+                  <i class="fa-solid fa-envelope fa-xl fa-bounce pr-2"></i>
                </div>
                <div>
-                  <i class="xl:fa-solid xl:fa-bell xl:fa-shake xl:fa-xl"></i>
+                  <i class="fa-solid fa-bell fa-shake fa-xl"></i>
                </div>
             </section>
-            <section class="xl:flex xl:justify-center">
-               <img src="../../assets/img/maze-bank-logo.png" alt="mazebank" width="8%" class="xl:absolute xl:mt-7" height="auto">
-               <h1 class="xl:font-bold xl:uppercase xl:text-5xl">maze <span class="xl:text-red-700">bank</span></h1>
+            <section class=" lg:flex lg:justify-center">
+               <img src="../../assets/img/maze-bank-logo.png" alt="mazebank" width="8%" class="absolute pt-7" height="auto">
+               <h1 class="lg:font-bold lg:uppercase lg:text-5xl">maze <span class="lg:text-red-700">bank</span></h1>
             </section>
-            <section class="xl:flex xl:flex-row xl:justify-end xl:pr-10 xl:mt-3 xl:w-11/12">
+            <section class="hidden lg:flex lg:flex-row lg:justify-end lg:pr-10 lg:mt-3 lg:w-11/12">
                <div>
-                  <i class="xl:fa-solid xl:fa-moon xl:fa-xl"></i>
+                  <i class="fa-solid fa-moon fa-xl"></i>
                </div>
-               <div class=" xl:px-10">
-                  <i class="xl:fa-solid xl:fa-cog xl:fa-spin xl:fa-xl"></i>
+               <div class="lg:px-20">
+                  <i class="fa-solid fa-cog fa-spin fa-xl"></i>
                </div>
                <div>
-                  <i class="xl:fa-solid xl:fa-rotate xl:fa-xl"></i>
+                  <i class="fa-solid fa-rotate fa-xl"></i>
                </div>
             </section>
          </header>
          <!-- Header END -->
-         <section class="xl:grid xl:grid-cols-2 xl:text-lg xl:uppercase xl:h-96 xl:mt-20">
-            <div class="xl:flex xl:flex-col xl:items-center xl:justify-center">
-               <p class="xl:pb-4 xl:text-red-700">Save your data</p>
+         <section class="lg:grid lg:grid-cols-2 lg:text-lg lg:uppercase lg:h-96 lg:mt-20">
+            <div class="lg:flex lg:flex-col lg:items-center lg:justify-center">
+               <p class="lg:pb-4 lg:text-red-700">Save your data</p>
                <div>
-                  <input id="input-fname" type="text" placeholder="first name" class="xl:placeholder:text-center xl:placeholder:uppercase xl:placeholder:font-thin xl:placeholder:text-gray-400">
+                  <input id="input-fname" type="text" placeholder="first name" class="lg:placeholder:text-center lg:placeholder:uppercase lg:placeholder:font-thin lg:placeholder:text-gray-400">
                </div>
                <div class="py-4">
-                  <input id="input-lname" type="text" placeholder="last name" class="xl:placeholder:text-center xl:placeholder:uppercase xl:placeholder:font-thin xl:placeholder:text-gray-400">
+                  <input id="input-lname" type="text" placeholder="last name" class="lg:placeholder:text-center lg:placeholder:uppercase lg:placeholder:font-thin lg:placeholder:text-gray-400">
                </div>
                <div>
-                  <input id="input-account" type="text" placeholder="number account" class="xl:placeholder:text-center xl:placeholder:uppercase xl:placeholder:font-thin xl:placeholder:text-gray-400">
+                  <input id="input-account" type="text" placeholder="number account" class="lg:placeholder:text-center lg:placeholder:uppercase lg:placeholder:font-thin lg:placeholder:text-gray-400">
                </div>
                <div class="py-4">
-                  <input id="input-iban" type="text" placeholder="iban" class="xl:placeholder:text-center xl:placeholder:uppercase xl:placeholder:font-thin xl:placeholder:text-gray-400">
+                  <input id="input-iban" type="text" placeholder="iban" class="lg:placeholder:text-center lg:placeholder:uppercase lg:placeholder:font-thin lg:placeholder:text-gray-400">
                </div>
                <div>
-                  <input id="input-bic" type="text" placeholder="bic" class="xl:placeholder:text-center xl:placeholder:uppercase xl:placeholder:font-thin xl:placeholder:text-gray-400">
+                  <input id="input-bic" type="text" placeholder="bic" class="lg:placeholder:text-center lg:placeholder:uppercase lg:placeholder:font-thin lg:placeholder:text-gray-400">
                </div>
                <div class="pt-4">
-                  <input id="input-sold" type="text" placeholder="sold" class="xl:placeholder:text-center xl:placeholder:uppercase xl:placeholder:font-thin xl:placeholder:text-gray-400">
+                  <input id="input-sold" type="text" placeholder="sold" class="lg:placeholder:text-center lg:placeholder:uppercase lg:placeholder:font-thin lg:placeholder:text-gray-400">
                </div>
                <div class="pt-8">
-                  <button id="btn-submit" type="button" class="xl:border-4 xl:text-cyan-300 xl:px-4">Send</button>
+                  <button id="btn-submit" type="button" class="lg:border-4 lg:text-cyan-300 lg:px-4">Send</button>
                </div>
             </div>
             <div class="flex flex-col items-center justify-between pl-4 pt-6">
