@@ -54,42 +54,48 @@
                <h2 class="text-teal-400">BIC : <span id="random-bic"></span></h2>
             </div>
             <div class="flex flex-col items-center justify-center">
-               <p class="pb-4">Save your data</p>
+               <p class="pb-4 text-red-700">Save your data</p>
                <div>
-                  <input type="text" placeholder="first name" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
+                  <input id="input-fname" type="text" placeholder="first name" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
                </div>
                <div class="py-4">
-                  <input type="text" placeholder="last name" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
+                  <input id="input-lname" type="text" placeholder="last name" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
                </div>
                <div>
-                  <input type="text" placeholder="number account" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
+                  <input id="input-account" type="text" placeholder="number account" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
                </div>
                <div class="py-4">
-                  <input type="text" placeholder="iban" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
+                  <input id="input-iban" type="text" placeholder="iban" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
                </div>
                <div>
-                  <input type="text" placeholder="bic" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
+                  <input id="input-bic" type="text" placeholder="bic" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
+               </div>
+               <div class="pt-8">
+                  <button id="btn-submit" type="button" class="border-4 text-white">Envoyer</button>
                </div>
             </div>
             <div class="flex flex-col items-center justify-around border-4 border-green-700 mx-4">
-               <h2 class="pb-10">compte beneficiaire</h2>
-               <div class="grid grid-cols-2 h-72">
+               <div class="flex flex-row">
+                  <img src="../../assets/img/maze-bank-logo.png" alt="maze-bank-logo" height="auto" width="15%" class="pb-3">
+                  <h2 class="pb-10 pl-28 text-red-700">compte beneficiaire</h2>
+               </div>
+               <div class="grid grid-cols-2 h-72 text-red-700">
                   <div class="flex flex-col justify-around items-end w-72">
-                    <p>first name :</p>
-                    <p>last name :<span id="result-fname"></span></p>
-                    <p>account number :<span id="result-fname"></span></p>
-                    <p>iban :<span id="result-fname"></span></p>
-                    <p>bic :<span id="result-fname"></span></p>
+                    <p>first name :<span id="result-fname"></span></p>
+                    <p>last name :<span id="result-lname"></span></p>
+                    <p>account number :<span id="result-account"></span></p>
+                    <p>iban :<span id="result-iban"></span></p>
+                    <p>bic :<span id="result-bic"></span></p>
                   </div>
-                  <div class="flex flex-col justify-around items-start w-72">
-                    <span id="result-fname">4</span>
-                    <span id="result-lname">s</span>
-                    <span id="result-account">w</span>
-                    <span id="result-iban">w</span>
-                    <span id="result-bic">w</span>
+                  <div class="flex flex-col justify-around items-start w-72 ml-1">
+                    <p><span id="result-fname"></span></p>
+                    <p><span id="result-lname"></span></p>
+                    <p><span id="result-account"></span></p>
+                    <p><span id="result-iban"></span></p>
+                    <p><span id="result-bic"></span></p>
                   </div>
-                  <div>
-                    <p class="text-lg font-bold w-max border border-l-red-600 border-t-fuchsia-500 border-r-amber-300 border-b-teal-500"><span id="results-sold"></span></p>
+                  <div class="flex justify-center items-center col-span-2">
+                    <p class="text-lg text-center font-bold w-20 h-6 border border-red-700"><span id="results-sold"></span></p>
                   </div>
             </div>
          </section>
@@ -101,12 +107,12 @@
                <div class="pr-20">
                   <label for="deposit-money" class="text-white">Dépôt d'argent</label>
                   <input type="number" id="deposit-money" class="bg-emerald-100 pl-1">
-                  <button type="button" id="submit-money" class="border border-zinc-800 text-teal-400">Envoyer</button>
+                  <button type="button" id="submit-money" class="border-4 border-cyan-100 text-teal-400">Envoyer</button>
                </div>
                <div class="">
                   <label for="cash-withdrawal" class="text-white">Retrait d'argent</label>
                   <input type="number" id="get-money" class="bg-emerald-100 pl-1">
-                  <button type="button" id="withdraw-money" class="border border-zinc-800 text-red-600">Retirer</button>
+                  <button type="button" id="withdraw-money" class="border-4 border-zinc-800 text-red-600">Retirer</button>
                </div>
             </form>
          </section>

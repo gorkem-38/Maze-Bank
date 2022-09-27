@@ -107,6 +107,30 @@ transfer.addEventListener("keydown", (key) => {
     key.code === "Enter" || key.code === "NumpadEnter" ? transfer() : ""
 });
 
+const inputFname = document.getElementById("input-fname");
+const inputLname = document.getElementById("input-lname"); 
+const inputAccount = document.getElementById("input-account"); 
+const inputIban = document.getElementById("input-iban"); 
+const inputBic = document.getElementById("input-bic"); 
+
+const resultFname = document.getElementById("result-fname");
+const resultLname = document.getElementById("result-lname");
+const resultAccount = document.getElementById("result-account");
+const resultIban = document.getElementById("result-iban");
+const resultBic = document.getElementById("result-bic");
+
+
+const accountData = () => {
+  resultFname.innerHTML = inputFname.value;
+  resultLname.innerHTML = inputLname.value;
+  resultAccount.innerHTML = inputAccount.value;
+  resultIban.innerHTML = inputIban.value;
+  resultBic.innerHTML = inputBic.value;
+};
+
+const buttonData = document.getElementById("btn-submit")
+buttonData.addEventListener("click", accountData);
+
 // const msgOverdraft = document.getElementById("msg-overdraft");
 // let sold = 0;
 
