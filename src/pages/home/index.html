@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="../../assets/css/output.css">
    </head>
    <body class="bg-mazebank bg-center bg-cover bg-no-repeat uppercase font-semibold overflow-x-hidden">
-      <div id="root" class="h-full backdrop-blur">
+      <div id="root" class="h-full backdrop-blur-sm">
       <!-- Header -->
          <header class="lg:grid lg:grid-cols-3 lg:h-20">
             <section class="hidden lg:flex lg:flex-row lg:justify-around lg:pl-7 lg:mt-3 lg:w-80">
@@ -48,7 +48,7 @@
          </header>
          <!-- Header END -->
          <section class="flex flex-col items-center mt-24 lg:grid lg:grid-cols-2 lg:text-lg lg:h-96 lg:mt-20">
-            <div class="text-center w-96 md:text-xl lg:flex lg:flex-col lg:items-center lg:justify-center">
+            <div class="text-center w-96 md:text-xl lg:flex lg:flex-col lg:items-center lg:justify-center lg:w-full">
                <p class="pb-4 text-3xl md:text-4xl lg:pb-4 text-red-700">Save Your Data</p>
                <div>
                   <input id="input-fname" type="text" placeholder="first name" class="placeholder:text-center placeholder:uppercase placeholder:font-thin placeholder:text-gray-400">
@@ -72,7 +72,7 @@
                   <button id="btn-submit" type="button" class="border-4 text-cyan-300 px-4">Send</button>
                </div>
             </div>
-            <div class="flex flex-col items-center justify-between text-white h-64 pl-4 md:text-xl">
+            <div class="flex flex-col items-center justify-between text-white h-64 pl-4 md:text-xl lg:justify-between lg:h-80">
                <h2>First Name : <span id="random-fname"></span></h2>
                <h2>Last Name : <span id="random-lname"></span></h2>
                <h2>Number Account : <span id="random-account"></span></h2>
@@ -109,7 +109,7 @@
          <div class="text-white border-t-4 mx-10 mt-8 lg:border-t-4 lg:mx-28 lg:mt-16">
          </div>
          <section class="flex flex-row justify-center lg:grid lg:grid-cols-3 text-white">
-            <img src="../../assets/img/maze-bank-logo.png" alt="maze-bank-logo" height="auto" width="40%" class="hidden pb-3">
+            <img src="../../assets/img/maze-bank-logo.png" alt="maze-bank-logo" height="auto" width="40%" class="hidden lg:block pb-3">
             <h2 class="col-span-2 text-2xl text-green-500 md:text-3xl lg:text-3xl lg:pt-4 lg:pl-40">Beneficiary Account</h2>
          </section>
          <section class="flex flex-col text-white md:text-xl lg:grid lg:grid-cols-2 lg:h-80">
@@ -140,7 +140,7 @@
             <!-- Beneficiary Account END -->
             <div class="flex flex-row justify-center h-40 lg:flex lg:justify-center">
                <div class="flex flex-col justify-around h-32 text-lg md:text-xl lg:flex lg:flex-col lg:items-center">
-                  <label for="send-money" class="text-black text-center pt-4"><span class="text-emerald-600">Cash transfer</span></label>
+                  <label for="send-money" class="text-center pt-4"><span class="text-emerald-600 lg:text-black">Cash transfer</span></label>
                   <input id="" type="number" class="text-black text-xl lg:mx-96 lg:h-8 bg-emerald-100">
                   <div class="flex justify-center pt-4 lg:flex lg:justify-end lg:pt-16">
                      <button type="button" class="bg-red-700 border-4 uppercase px-2 lg:px-4">Send money$</button>
