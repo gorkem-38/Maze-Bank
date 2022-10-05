@@ -18,12 +18,6 @@ const randomSold = document.getElementById("random-sold");
 const randomFname = document.getElementById("random-fname");
 const randomLname = document.getElementById("random-lname");
 
-// buttonGenerate.addEventListener("click", () => {
-//   let array = ["James", "Christian", "Alexa"];
-//   let array2 = ["Perry", "Alonso", "Jones"];
-//   return Math.random() (array + array2);
-// })
-
 const buttonRandom = () => {
   randomAccount.innerHTML = getRandom(11111111111, 99999999999);
   randomIban.innerHTML = `FR` + getRandom(759999999999, 770000000000);
