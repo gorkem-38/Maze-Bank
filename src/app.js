@@ -135,3 +135,54 @@ buttonData.addEventListener("click", accountData);
 // };
 
 // console.log(overdraft());
+
+// const input = document.getElementById("gorkem-test");
+// const button = document.getElementById("gorkem-test-id");
+// const result = document.getElementById("gorkem-test-result");
+
+// const postalCode = () => {
+//   // ...
+//   const getPostalCode = () => {
+//     try {
+//       let inputVal = parseInt(input.value);
+
+//       const dept = [77, 78, 93, 94, 75, 80];
+//       dept.map((element) => {
+//         if (inputVal === element) {
+//           console.log("success !!!");
+//           result.innerHTML = `Votre code postal : ${inputVal} !`;
+//         } 
+//       })
+//     } catch (error) {
+//       console.error(error);
+//     }
+//   };
+
+//   //   ...
+//   try {
+//     button.addEventListener("click", () => getPostalCode());
+//     input.addEventListener("keydown", (key) => {
+//       key.key === "Enter" ? getPostalCode() : "";
+//     })
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+// postalCode();
+
+// const city = () => {
+//   const town = ["92", "91", "75"];
+
+//   const getCity = () => {
+//     let inputVal = input.value;
+//     // Si l'utilisateur saisie une ville contenue dans notre tableau, il ne peut pas commander
+//     town.map((city) => {
+//       if(inputVal === city) {
+//         console.log("Vous ne pouvez pas commander");
+//       }
+//     })
+//   }
+
+//   button.addEventListener("click", () => getCity());
+// }
+// city();

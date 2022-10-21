@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Pricedown: ["Pricedown", ...defaultTheme.fontFamily.sans],
+        Pricedown: ["Pricedown"]
       },
       backgroundImage: {
         'mazebank': "url('../img/maze-bank-tower.jpg')",
