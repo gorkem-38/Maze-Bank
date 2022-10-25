@@ -12,7 +12,7 @@ module.exports = {
   devtool: "inline-source-map",
   optimization: {
     runtimeChunk: "single",
-  },
+  }, 
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/pages/home/index.html"),
